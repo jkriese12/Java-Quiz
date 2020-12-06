@@ -1,0 +1,18 @@
+/* Formatting and styles for header and text content */
+.title {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 90px;
+    font-family: 'Oswald', sans-serif;
+}
+.tutorial {
+    text-align: center;
+    margin-top: 75px;
+    margin-left: 100px;
+    margin-right: 100px;
+    font-size: 20px;
+}   
+b {
+    font-size: 30px;
+    color: red;
+}

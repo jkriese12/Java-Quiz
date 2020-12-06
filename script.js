@@ -1,5 +1,4 @@
-var click = document.querySelector("#button")
-click.addEventListener("click", function() {
-    alert("nice")
-});
+// Global variables for time and questions
+var timeAlotted = 60;
+
 

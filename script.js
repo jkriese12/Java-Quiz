@@ -1,46 +1,54 @@
-// Timer for quiz
-var seconds = document.getElementById("countdown").textContent;
+    // Timer for quiz
+    var seconds = document.getElementById("countdown").textContent;
     var countdown = setInterval(function() {
         seconds--;
         document.getElementById("countdown").textContent = seconds;
-        if (seconds <= 0) {clearInterval(countdown); alert("TIMES UP")} 
+        if (seconds <= 0) {clearInterval(countdown); alert("TIMES UP"); window.location="try-again.html"; } 
     }, 1000); 
+    
     //Setting variable selectors
     var choice1 = document.getElementById("choice1");
     var choice2 = document.getElementById("choice2");
     var choice3 = document.getElementById("choice3");
     var choice4 = document.getElementById("choice4");
     var questionText = document.querySelector(".questionText");
+    var answerCorrect = 0;
+   
     // Question one content
     var questionOne = "Inside which HTML element do we put the JavaScript?"
     var q1c1 = "<script>";
     var q1c2 = "<scripting>";
     var q1c3 = "<javascript>";
     var q1c4 = "<js>";
+   
     // Question two content
     var questionTwo = "How do you write ''Hello World'' in an alert box?";
     var q2c1 = "msgBox(''Hello World'');";
     var q2c2 = "msg(''Hello World'');";
     var q2c3 = "alertBox(''Hello World'');";
     var q2c4 = "alert(''Hello World'');";
+   
     // Question three content
     var questionThree = "How do you write an IF statement in JavaScript";
     var q3c1 = "if i = 5";
     var q3c2 = "if i == 5 then";
     var q3c3 = "if i = 5 then";
     var q3c4 = "if (i == 5)";
+   
     // Question four content
     var questionFour = "How does a FOR loop start?";
     var q4c1 = "for (i = 0; i < 5; i++)";
     var q4c2 = "for (i = 0; i < 5)";
     var q4c3 = "for (i < 5; i++)";
     var q4c4 = "for (i =1 to 5)";
+   
     // Question five content
     var questionFive = "What is the correct way to write a JavaScript array?";
     var q5c1 = "var colors = [“red”, “green”, “blue”]";
     var q5c2 = "var colors = “red”, “green”, “blue”";
     var q5c3 = "var colors = [1:“red”, 2:“green”, 3:“blue”]";
     var q5c4 = "var colors = (“red”, “green”, “blue”)";
+  
     // Question six content
     var questionSix = "Which one of these Disneyland rides is NOT based on a movie?";
     var q6c1 = "Mr. Toads Wild Ride";
@@ -54,9 +62,11 @@ var seconds = document.getElementById("countdown").textContent;
     $("#choice2").text(q1c2);
     $("#choice3").text(q1c3);
     $("#choice4").text(q1c4);
+  
     // On-click functions for each answer - moving user to next question
     $("#choice1").on("click", function() {
         alert("Correct!");
+        answerCorrect++;
         nextQuestion2 ();
     });
     $("#choice2").on("click", function() {
@@ -74,6 +84,7 @@ var seconds = document.getElementById("countdown").textContent;
         seconds -= 10;
         nextQuestion2 ();
     });
+   
     // Changing text for next question - unbinding click handlers to match new answers
     function nextQuestion2 () {
         $("#choice1").text(q2c1).unbind();
@@ -83,6 +94,7 @@ var seconds = document.getElementById("countdown").textContent;
         $(".questionText").text(questionTwo);
         changeAnswer2 ();
      };
+   
      // Question 2 updated click handlers
      function changeAnswer2 () {
         $("#choice1").on("click", function() {
@@ -102,9 +114,11 @@ var seconds = document.getElementById("countdown").textContent;
         });
         $("#choice4").on("click", function() {
             alert("Correct!");
+            answerCorrect++;
             nextQuestion3 ();
         });
      };
+   
      // Changing text for next question - unbinding click handlers to match new answers
      function nextQuestion3 () {
         $("#choice1").text(q3c1).unbind();
@@ -114,6 +128,7 @@ var seconds = document.getElementById("countdown").textContent;
         $(".questionText").text(questionThree);
         changeAnswer3 ();
      };
+   
      // Question 3 updated click handlers
      function changeAnswer3 () {
         $("#choice1").on("click", function() {
@@ -135,12 +150,14 @@ var seconds = document.getElementById("countdown").textContent;
         });
         $("#choice4").on("click", function() {
             alert("Correct!");
+            answerCorrect++;
             nextQuestion4 ();
             
         });
     };
+   
     // Changing text for next question - unbinding click handlers to match new answers
-        function nextQuestion4 () {
+     function nextQuestion4 () {
         $("#choice1").text(q4c1).unbind();
         $("#choice2").text(q4c2).unbind();
         $("#choice3").text(q4c3).unbind();
@@ -149,9 +166,10 @@ var seconds = document.getElementById("countdown").textContent;
         changeAnswer4 ();
         };
         // Question 4 updated click handlers
-        function changeAnswer4 () {
+     function changeAnswer4 () {
             $("#choice1").on("click", function() {
                 alert("Correct!");
+                answerCorrect++;
                 nextQuestion5 ()
             });
             $("#choice2").on("click", function() {
@@ -173,8 +191,9 @@ var seconds = document.getElementById("countdown").textContent;
                 
             });
         };
-         // Changing text for next question - unbinding click handlers to match new answers
-        function nextQuestion5 () {
+       
+        // Changing text for next question - unbinding click handlers to match new answers
+     function nextQuestion5 () {
             $("#choice1").text(q5c1).unbind();
             $("#choice2").text(q5c2).unbind();
             $("#choice3").text(q5c3).unbind();
@@ -182,10 +201,12 @@ var seconds = document.getElementById("countdown").textContent;
             $(".questionText").text(questionFive);
             changeAnswer5 ();
             };
+         
             // Question 5 updated click handlers
-            function changeAnswer5 () {
+     function changeAnswer5 () {
                 $("#choice1").on("click", function() {
                     alert("Correct!");
+                    answerCorrect++;
                     nextQuestion6 ()
                 });
                 $("#choice2").on("click", function() {
@@ -207,8 +228,9 @@ var seconds = document.getElementById("countdown").textContent;
                     
                 });
             };
+         
             // Changing text for next question - unbinding click handlers to match new answers    
-            function nextQuestion6 () {
+     function nextQuestion6 () {
                 $("#choice1").text(q6c1).unbind();
                 $("#choice2").text(q6c2).unbind();
                 $("#choice3").text(q6c3).unbind();
@@ -216,25 +238,49 @@ var seconds = document.getElementById("countdown").textContent;
                 $(".questionText").text(questionSix);
                 changeAnswer6 ();
                 };
-                //Question 6 udated click handlers
-                function changeAnswer6 () {
+            
+                //Question 6 updated click handlers
+     function changeAnswer6 () {
                     $("#choice1").on("click", function() {
+                        alert("Not Quite!");
                         seconds -= 10;
-                        nextQuestion6 ()
+                        if (seconds <=0) { window.location.href="try-again.html" } else { highScore () };
                     });
                     $("#choice2").on("click", function() {
                         alert("Not Quite!");
                         seconds -= 10;
+                        if (seconds <=0) { window.location.href="try-again.html" } else { highScore () };
                     });
                     $("#choice3").on("click", function() {
                         alert("Correct!");
+                        answerCorrect++;
+                        if (seconds <=0) { window.location.href="try-again.html" } else { highScore () };
                     });
                     $("#choice4").on("click", function() {
                         alert("Not Quite!");
                         seconds -= 10;
+                        if (seconds <=0) { window.location.href="try-again.html" } else { highScore () };
                     });
                 };
+    function highScore () {
+        $("#timeLeft").empty();
+        $("button").empty();
+        $(".questionAnswers").empty();
+        $(".questionText").text("You answered " + answerCorrect + " questions correct!");
+        $(".questionText").addClass("title container");
+        $(".questionText").css({ "font-size" : "60px", "text-align" : "center" });
+        $("<div></div>").appendTo("h2").css({ "color" : "green", "margin-top" : "100px"}).text("Total time remaining " + seconds + " seconds")
+        $("div").removeClass("questionAnswers")
+        $("<a></a>").appendTo(".highScore").addClass("btn btn-primary btn-lg btn-block btn-hover").text("Enter your score").attr("href", "high-score.html")
+        
+        
+       
+    };
 
+       
+    
+
+            
     
     
     

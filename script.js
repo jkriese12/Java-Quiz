@@ -262,7 +262,8 @@
                         if (seconds <=0) { window.location.href="try-again.html" } else { highScore () };
                     });
                 };
-    function highScore () {
+        // Function called to show users score and time remaining        
+        function highScore () {
         $("#timeLeft").empty();
         $("button").empty();
         $(".questionAnswers").empty();
@@ -295,7 +296,7 @@
 
 
 
-
+//DID NOT USE, KEPT FOR LEARNING AND TO GO OVER WITH TUTOR
 
     // Array of question objects
 // var questions = [

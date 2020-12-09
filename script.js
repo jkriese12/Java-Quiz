@@ -133,17 +133,14 @@ function changeAnswer2() {
   });
   $("#choice2").on("click", function () {
     incorrectAnswerHandler();
-
     nextQuestion3();
   });
   $("#choice3").on("click", function () {
     incorrectAnswerHandler();
-
     nextQuestion3();
   });
   $("#choice4").on("click", function () {
     correctAnswerHandler();
-
     nextQuestion3();
   });
 }
@@ -158,22 +155,18 @@ function nextQuestion3() {
 function changeAnswer3() {
   $("#choice1").on("click", function () {
     incorrectAnswerHandler();
-
     nextQuestion4();
   });
   $("#choice2").on("click", function () {
     incorrectAnswerHandler();
-
     nextQuestion4();
   });
   $("#choice3").on("click", function () {
     incorrectAnswerHandler();
-
     nextQuestion4();
   });
   $("#choice4").on("click", function () {
     correctAnswerHandler();
-
     nextQuestion4();
   });
 }
@@ -187,22 +180,18 @@ function nextQuestion4() {
 function changeAnswer4() {
   $("#choice1").on("click", function () {
     correctAnswerHandler();
-
     nextQuestion5();
   });
   $("#choice2").on("click", function () {
     incorrectAnswerHandler();
-
     nextQuestion5();
   });
   $("#choice3").on("click", function () {
     incorrectAnswerHandler();
-
     nextQuestion5();
   });
   $("#choice4").on("click", function () {
     incorrectAnswerHandler();
-
     nextQuestion5();
   });
 }
@@ -217,22 +206,18 @@ function nextQuestion5() {
 function changeAnswer5() {
   $("#choice1").on("click", function () {
     correctAnswerHandler();
-
     nextQuestion6();
   });
   $("#choice2").on("click", function () {
     incorrectAnswerHandler();
-
     nextQuestion6();
   });
   $("#choice3").on("click", function () {
     incorrectAnswerHandler();
-
     nextQuestion6();
   });
   $("#choice4").on("click", function () {
     incorrectAnswerHandler();
-
     nextQuestion6();
   });
 }
@@ -247,7 +232,6 @@ function nextQuestion6() {
 function changeAnswer6() {
   $("#choice1").on("click", function () {
     incorrectAnswerHandler();
-
     if (seconds <= 0) {
       window.location.href = "try-again.html";
     } else {
@@ -256,7 +240,6 @@ function changeAnswer6() {
   });
   $("#choice2").on("click", function () {
     incorrectAnswerHandler();
-
     if (seconds <= 0) {
       window.location.href = "try-again.html";
     } else {
@@ -265,7 +248,6 @@ function changeAnswer6() {
   });
   $("#choice3").on("click", function () {
     correctAnswerHandler();
-
     if (seconds <= 0) {
       window.location.href = "try-again.html";
     } else {
@@ -274,7 +256,6 @@ function changeAnswer6() {
   });
   $("#choice4").on("click", function () {
     incorrectAnswerHandler();
-
     if (seconds <= 0) {
       window.location.href = "try-again.html";
     } else {

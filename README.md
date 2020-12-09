@@ -6,6 +6,7 @@ to the quiz upon clicking the link. The quiz is timed for 60 seconds and the use
 Upcoming updates: Getting highscores to generate and be able to save to local storage.
 
 Please see pictures below of different pages of the webpage
+
 Main
 ![image](https://user-images.githubusercontent.com/73569538/101584896-dc14d900-399b-11eb-823c-49ac1164b2cf.png)
 Quiz
